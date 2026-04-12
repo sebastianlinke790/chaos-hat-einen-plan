@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vorlagen-Download — Dein Chaos hat einen Plan</title>
+  <meta name="description" content="Kostenloser Download aller Arbeitsvorlagen zum Buch »Dein Chaos hat einen Plan« von Sebastian Linke. Energiezone-Map, Steuerfallen-Audit, Mikro-Commitment-Protokoll, Meeting-Notizbuch und 12-Wochen-Tracker.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vorlagen-Download — Dein Chaos hat einen Plan">
+  <meta property="og:description" content="Alle Arbeitsvorlagen zum Buch kostenlos als A4-PDF. Kein Account, keine Registrierung.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.chaos-hat-einen-plan.de/vorlagen">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Reset & Base ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #080707;
+      --bg-card: #111010;
+      --red:     #BE0A19;
+      --red-h:   #D40C1E;
+      --white:   #F0EEE8;
+      --cream:   #C8C3BB;
+      --gray:    #7D7870;
+      --dim:     #333130;
+      --font:    'Bricolage Grotesque', system-ui, sans-serif;
+      --radius:  6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 18px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Skip-Link (WCAG 2.2) ──────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--red);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      z-index: 9999;
+      border-radius: var(--radius);
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ── Layout ────────────────────────────────────────────────────── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Nav ───────────────────────────────────────────────────────── */
+    nav {
+      border-bottom: 1px solid var(--dim);
+      padding: 1.25rem 0;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+    }
+    .nav-title span { color: var(--red); }
+    .nav-divider {
+      width: 1px;
+      height: 1rem;
+      background: var(--dim);
+    }
+    .nav-page {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    /* ── Hero ──────────────────────────────────────────────────────── */
+    header {
+      padding: 5rem 0 3.5rem;
+      border-bottom: 1px solid var(--dim);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      border: 1px solid var(--red);
+      padding: 0.3rem 0.75rem;
+      border-radius: 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+    h1 em {
+      font-style: normal;
+      color: var(--red);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--cream);
+      max-width: 580px;
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+    .meta-item svg { flex-shrink: 0; }
+
+    /* ── Triple Rule ───────────────────────────────────────────────── */
+    .rule {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin: 3rem 0;
+    }
+    .rule span { display: block; background: var(--red); height: 1px; }
+    .rule span:nth-child(2) { height: 2px; }
+
+    /* ── Download All ──────────────────────────────────────────────── */
+    .download-all {
+      background: var(--red);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.4rem 1.75rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      transition: background 0.15s;
+    }
+    .download-all:hover,
+    .download-all:focus-visible {
+      background: var(--red-h);
+      outline: 3px solid var(--white);
+      outline-offset: 3px;
+    }
+    .download-all .label { font-size: 0.82rem; font-weight: 400; opacity: 0.85; }
+
+    /* ── Template Grid ─────────────────────────────────────────────── */
+    main { padding: 3rem 0 5rem; }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .template-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--dim);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .template-item {
+      background: var(--bg-card);
+      display: grid;
+      grid-template-columns: 3rem 1fr auto;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      transition: background 0.12s;
+    }
+    .template-item:not(:last-child) {
+      border-bottom: 1px solid var(--dim);
+    }
+    .template-item:hover { background: #161514; }
+
+    .template-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--dim);
+      text-align: center;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .template-info {}
+    .template-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .template-desc {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.4;
+    }
+    .template-chapter {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-top: 0.35rem;
+    }
+
+    .template-dl {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--dim);
+      border-radius: var(--radius);
+      padding: 0.55rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: var(--font);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+      white-space: nowrap;
+    }
+    .template-dl:hover,
+    .template-dl:focus-visible {
+      border-color: var(--red);
+      color: var(--red);
+      background: rgba(190,10,25,0.06);
+      outline: 2px solid var(--red);
+      outline-offset: 2px;
+    }
+
+    /* ── Usage Note ────────────────────────────────────────────────── */
+    .usage-note {
+      background: var(--bg-card);
+      border: 1px solid var(--dim);
+      border-left: 3px solid var(--red);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      color: var(--cream);
+      line-height: 1.65;
+    }
+    .usage-note strong { color: var(--white); }
+
+    /* ── Footer ────────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--dim);
+      padding: 2rem 0;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--gray);
+    }
+    .footer-link {
+      font-size: 0.82rem;
+      color: var(--gray);
+      text-decoration: none;
+    }
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: var(--white);
+      text-decoration: underline;
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* ── Focus Styles (WCAG 2.2 AA) ───────────────────────────────── */
+    :focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* ── Responsive ────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .template-item {
+        grid-template-columns: 2.25rem 1fr;
+        grid-template-rows: auto auto;
+      }
+      .template-dl {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 0.5rem;
+      }
+      .hero-meta { gap: 1rem; }
+    }
+
+    /* ── Print ─────────────────────────────────────────────────────── */
+    @media print {
+      body { background: white; color: black; }
+      .download-all, .template-dl { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+<!-- Navigation -->
+<nav aria-label="Seitennavigation">
+  <div class="container">
+    <a href="https://www.chaos-hat-einen-plan.de" class="nav-title" aria-label="Zur Startseite — Dein Chaos hat einen Plan">
+      Dein Chaos <span>hat einen Plan.</span>
+    </a>
+    <div class="nav-divider" role="presentation"></div>
+    <span class="nav-page" aria-current="page">Vorlagen-Download</span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header>
+  <div class="container">
+    <div class="badge" aria-label="Kostenlos">Kostenlos — kein Account erforderlich</div>
+
+    <h1>
+      Deine <em>Arbeitsvorlagen.</em><br>
+      Alle fünf. Sofort.
+    </h1>
+
+    <p class="hero-sub">
+      Alle im Buch referenzierten Vorlagen als druckfertige A4-PDF-Dateien —
+      einzeln oder als Komplettpaket. Kein Account, keine E-Mail-Adresse,
+      keine Registrierung.
+    </p>
+
+    <div class="hero-meta" role="list">
+      <div class="meta-item" role="listitem">
+        <!-- Icon: file -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        5 Vorlagen
+      </div>
+      <div class="meta-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        Format A4, druckfertig
+      </div>
+      <div class="meta-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        Datenschutzkonform · DSGVO
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main id="main-content">
+  <div class="container">
+
+    <div class="rule" role="presentation">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Download All Button -->
+    <a href="downloads/Vorlagenpaket_KOMPLETT.pdf"
+       download="Vorlagenpaket_KOMPLETT_DeinChaosHatEinenPlan.pdf"
+       class="download-all"
+       aria-label="Alle 5 Vorlagen als ZIP-Paket herunterladen">
+      <div>
+        <div>Alle 5 Vorlagen auf einmal herunterladen</div>
+        <div class="label">Vorlagenpaket_KOMPLETT.pdf · ca. 2 MB</div>
+      </div>
+      <!-- Download Icon -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+
+    <!-- Individual Templates -->
+    <p class="section-label" id="einzeln-label">Oder einzeln herunterladen</p>
+
+    <ul class="template-list" aria-labelledby="einzeln-label">
+
+      <li class="template-item">
+        <div class="template-number" aria-hidden="true">01</div>
+        <div class="template-info">
+          <div class="template-name">Energiezone-Map</div>
+          <div class="template-desc">7-Tage-Tracking deiner biologischen Energiefenster — Grundlage für die 3-Zonen-Tagesarchitektur.</div>
+          <span class="template-chapter">Kapitel 5</span>
+        </div>
+        <a href="downloads/Vorlage_01_Energiezone_Map.pdf"
+           download="Vorlage_01_Energiezone_Map.pdf"
+           class="template-dl"
+           aria-label="Vorlage 01 Energiezone-Map als PDF herunterladen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          PDF
+        </a>
+      </li>
+
+      <li class="template-item">
+        <div class="template-number" aria-hidden="true">02</div>
+        <div class="template-info">
+          <div class="template-name">Steuerfallen-Audit</div>
+          <div class="template-desc">Bestandsaufnahme der kognitiven Belastungspunkte in deinem Arbeitsalltag — mit Messzahlen für Woche 6 und 12.</div>
+          <span class="template-chapter">Kapitel 3</span>
+        </div>
+        <a href="downloads/Vorlage_02_Steuerfallen_Audit.pdf"
+           download="Vorlage_02_Steuerfallen_Audit.pdf"
+           class="template-dl"
+           aria-label="Vorlage 02 Steuerfallen-Audit als PDF herunterladen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          PDF
+        </a>
+      </li>
+
+      <li class="template-item">
+        <div class="template-number" aria-hidden="true">03</div>
+        <div class="template-info">
+          <div class="template-name">Mikro-Commitment-Protokoll</div>
+          <div class="template-desc">Das 5-Schritt-Protokoll zur Aufgabenteilung — für den täglichen Einsatz bei Aufgabenblockaden.</div>
+          <span class="template-chapter">Kapitel 6</span>
+        </div>
+        <a href="downloads/Vorlage_03_Mikro_Commitment_Protokoll.pdf"
+           download="Vorlage_03_Mikro_Commitment_Protokoll.pdf"
+           class="template-dl"
+           aria-label="Vorlage 03 Mikro-Commitment-Protokoll als PDF herunterladen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          PDF
+        </a>
+      </li>
+
+      <li class="template-item">
+        <div class="template-number" aria-hidden="true">04</div>
+        <div class="template-info">
+          <div class="template-name">Meeting-Notizbuch</div>
+          <div class="template-desc">Das AP-Notizsystem für Meetings — mit Pre-Meeting-Ritual, Echtzeit-Capture und Post-Meeting-Protokoll.</div>
+          <span class="template-chapter">Kapitel 10</span>
+        </div>
+        <a href="downloads/Vorlage_04_Meeting_Notizbuch.pdf"
+           download="Vorlage_04_Meeting_Notizbuch.pdf"
+           class="template-dl"
+           aria-label="Vorlage 04 Meeting-Notizbuch als PDF herunterladen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          PDF
+        </a>
+      </li>
+
+      <li class="template-item">
+        <div class="template-number" aria-hidden="true">05</div>
+        <div class="template-info">
+          <div class="template-name">12-Wochen-Tracker</div>
+          <div class="template-desc">Der vollständige Wochenplaner für alle drei Protokoll-Phasen — Foundation, Stabilisierung und Integration.</div>
+          <span class="template-chapter">Kapitel 12</span>
+        </div>
+        <a href="downloads/Vorlage_05_12_Wochen_Tracker.pdf"
+           download="Vorlage_05_12_Wochen_Tracker.pdf"
+           class="template-dl"
+           aria-label="Vorlage 05 12-Wochen-Tracker als PDF herunterladen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          PDF
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- Usage Note -->
+    <aside class="usage-note" aria-label="Hinweis zur Nutzung">
+      <strong>So verwendest du die Vorlagen:</strong> Drucke die Seiten in A4 aus oder fülle sie digital aus
+      (z.&nbsp;B. mit Adobe Acrobat Reader oder einem PDF-Editor deiner Wahl).
+      Die Vorlagen sind für den wiederholten Einsatz ausgelegt —
+      drucke mehrere Exemplare oder nutze sie digital mit Tablet und Stift.
+      Alle Felder sind im Buch Schritt für Schritt erklärt.
+    </aside>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="footer-copy">
+      &copy; <span id="year"></span> Sebastian Linke &nbsp;·&nbsp;
+      <em>Dein Chaos hat einen Plan</em>
+    </p>
+    <nav aria-label="Footer-Navigation">
+      <a href="https://www.chaos-hat-einen-plan.de/impressum" class="footer-link">Impressum</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.chaos-hat-einen-plan.de/datenschutz" class="footer-link">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Aktuelles Jahr im Footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
